@@ -2,7 +2,7 @@ package za.ac.SizweNcikana.Domain.Employee;
 
 public class Employee {
     private String empId;
-    private String firstname;
+    private String firstName;
     private String lastName;
 
     //public
@@ -13,7 +13,7 @@ public class Employee {
 
     private Employee(Builder builder)
     {
-        this.firstname = builder.firstName;
+        this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.empId = builder.empId;
     }
@@ -41,6 +41,14 @@ public class Employee {
             return this;
         }
 
+        public Builder copy(Employee employee)
+        {
+            this.firstName = employee.firstName;
+            this.lastName = employee.lastName;
+
+            return this;
+        }
+
         public Employee build() {
             return new Employee(this);
         }
@@ -51,8 +59,8 @@ public class Employee {
         return empId;
     }
 
-    public String getFirstName() {
-        return firstname;
+    public String getfirstName() {
+        return firstName;
     }
 
     public String getLastName(){
@@ -61,7 +69,7 @@ public class Employee {
 
     public String toString(){
         String str;
-        str = "EmployeeController ID: " + getEmpId() + "First Name: " + getFirstName() + " Last Name: " + getLastName();
+        str = "EmployeeController ID: " + getEmpId() + " First Name: " + getfirstName() + " Last Name: " + getLastName();
         return str;
     }
 }
