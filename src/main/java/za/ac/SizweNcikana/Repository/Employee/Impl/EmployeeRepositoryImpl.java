@@ -51,10 +51,16 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     @Override
     public Employee update(Employee employee)
     {
-        if(this.employees.get(employee.getEmpId()) != null)
+        if(employees.get(employee.getEmpId()) != null)
         {
-            delete(employee.getEmpId());
-            create(employee);
+            //Find out difference between "remove" and "delete"
+
+          employees.remove(employee.getEmpId());
+
+            //    delete(employee.getEmpId());
+            //     create(employee);
+            employees.put(employee.getEmpId(), employee);
+
         }
         return this.employees.get(employee.getEmpId());
         //this.employees.replace(employee.getEmpId(), employee);

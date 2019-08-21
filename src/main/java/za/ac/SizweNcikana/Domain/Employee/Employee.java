@@ -43,6 +43,7 @@ public class Employee {
 
         public Builder copy(Employee employee)
         {
+            this.empId = employee.empId;
             this.firstName = employee.firstName;
             this.lastName = employee.lastName;
 
@@ -55,19 +56,23 @@ public class Employee {
 
     }
 
-    public String getEmpId(){
+    public String getEmpId()
+    {
         return empId;
     }
 
-    public String getfirstName() {
+    public String getfirstName()
+    {
         return firstName;
     }
 
-    public String getLastName(){
+    public String getLastName()
+    {
         return lastName;
     }
 
-    public String toString(){
+    public String toString()
+    {
         String str;
         str = "EmployeeController ID: " + getEmpId() + " First Name: " + getfirstName() + " Last Name: " + getLastName();
         return str;
