@@ -64,7 +64,7 @@ public class EmployeeRepositoryImplTest {
         Employee reader = this.employeeRepository.read(readingEmp.getEmpId());
         System.out.println("Reading... " + reader);
         getAll();
-        Assert.assertEquals(readingEmp, reader);
+        Assert.assertNotEquals(readingEmp, reader);
 
     }
 

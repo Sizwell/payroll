@@ -53,9 +53,7 @@ public class EmployeeRepositoryImpl implements EmployeeRepository {
     {
         if(employees.get(employee.getEmpId()) != null)
         {
-            //Find out difference between "remove" and "delete"
-
-          employees.remove(employee.getEmpId());
+           employees.remove(employee.getEmpId());
 
             //    delete(employee.getEmpId());
             //     create(employee);
